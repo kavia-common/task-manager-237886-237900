@@ -1,0 +1,157 @@
+:root {
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #64748b;
+
+  --primary: #3b82f6;
+  --success: #06b6d4;
+
+  --border: rgba(17, 24, 39, 0.1);
+  --shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), var(--bg) 260px);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.headerInner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.brandMark {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--primary), var(--success));
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.25);
+}
+
+.brandText {
+  font-size: 15px;
+}
+
+.nav {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.navLink:hover {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--text);
+}
+
+.navLinkActive {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--text);
+}
+
+.appMain {
+  padding: 28px 0 56px;
+}
+
+.pageTitleRow {
+  margin: 10px 0 18px;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.muted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
